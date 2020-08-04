@@ -1,0 +1,97 @@
+MODEL:
+  META_ARCHITECTURE: "GeneralizedRCNN"
+  # WEIGHT: "catalog://ImageNetPretrained/MSRA/R-50"
+  # WEIGHT: '/checkpoint/minghuiliao/MaskTextSpotter/output/seg_rec/model_0180000.pth'
+  WEIGHT: '/checkpoint/minghuiliao/MaskTextSpotter/output/seg_rec_poly_fuse_feature_pretrain/model_0299999.pth'
+  # WEIGHT: '/checkpoint/minghuiliao/MaskTextSpotter/output/seg_alone_finetune/model_0160000.pth'
+  BACKBONE:
+    CONV_BODY: "R-50-FPN"
+    OUT_CHANNELS: 256
+  RESNETS:
+    BACKBONE_OUT_CHANNELS: 256
+  RPN:
+    USE_FPN: True
+    ANCHOR_STRIDE: (4, 8, 16, 32, 64)
+    PRE_NMS_TOP_N_TRAIN: 2000
+    PRE_NMS_TOP_N_TEST: 1000
+    POST_NMS_TOP_N_TEST: 1000
+    FPN_POST_NMS_TOP_N_TEST: 1000
+  SEG:
+    USE_FPN: True
+    USE_FUSE_FEATURE: True
+    TOP_N_TRAIN: 1000
+    TOP_N_TEST: 1000
+    BINARY_THRESH: 0.1
+    BOX_THRESH: 0.1
+    MIN_SIZE: 5
+    SHRINK_RATIO: 0.4
+    EXPAND_RATIO: 3.0
+  ROI_HEADS:
+    USE_FPN: True
+    BATCH_SIZE_PER_IMAGE: 512
+  ROI_BOX_HEAD:
+    POOLER_RESOLUTION: 7
+    POOLER_SCALES: (0.25,)
+    POOLER_SAMPLING_RATIO: 2
+    FEATURE_EXTRACTOR: "FPN2MLPFeatureExtractor"
+    PREDICTOR: "FPNPredictor"
+    NUM_CLASSES: 2
+    USE_MASKED_FEATURE: True
+  ROI_MASK_HEAD:
+    POOLER_SCALES: (0.25,)
+    FEATURE_EXTRACTOR: "MaskRCNNFPNFeatureExtractor"
+    PREDICTOR: "SeqCharMaskRCNNC4Predictor"
+    POOLER_RESOLUTION: 14
+    POOLER_RESOLUTION_H: 32
+    POOLER_RESOLUTION_W: 32
+    POOLER_SAMPLING_RATIO: 2
+    RESOLUTION: 28
+    RESOLUTION_H: 64
+    RESOLUTION_W: 64
+    SHARE_BOX_FEATURE_EXTRACTOR: False
+    CHAR_NUM_CLASSES: 37
+    USE_WEIGHTED_CHAR_MASK: True
+    MASK_BATCH_SIZE_PER_IM: 64
+    USE_MASKED_FEATURE: True
+  MASK_ON: True
+  CHAR_MASK_ON: True
+  SEG_ON: True
+SEQUENCE:
+  SEQ_ON: True
+  NUM_CHAR: 38
+  BOS_TOKEN: 0
+  MAX_LENGTH: 32
+  TEACHER_FORCE_RATIO: 1.0
+DATASETS:
+  TRAIN: ("synthtext_train",)
+  # TRAIN: ("synthtext_train","icdar_2013_train","icdar_2015_train","scut-eng-char_train","total_text_train")
+  # RATIOS: [0.25,0.25,0.25,0.125,0.125]
+  TEST: ("icdar_2015_test",)
+  # TEST: ("total_text_test",)
+  AUG: True
+  IGNORE_DIFFICULT: True
+  MAX_ROTATE_THETA: 90
+DATALOADER:
+  SIZE_DIVISIBILITY: 32
+  NUM_WORKERS: 4
+  ASPECT_RATIO_GROUPING: False
+SOLVER:
+  BASE_LR: 0.02 #0.02
+  WARMUP_FACTOR: 0.1
+  WEIGHT_DECAY: 0.0001
+  STEPS: (100000, 200000)
+  MAX_ITER: 300000
+  IMS_PER_BATCH: 8
+  RESUME: True
+  DISPLAY_FREQ: 20
+OUTPUT_DIR: "./output/pretrain"
+TEST:
+  VIS: False
+  CHAR_THRESH: 192
+  IMS_PER_BATCH: 1
+INPUT:
+  MIN_SIZE_TRAIN: (600, 800)
+  # MIN_SIZE_TRAIN: (800, 1000, 1200, 1400)
+  MAX_SIZE_TRAIN: 2333
+  MIN_SIZE_TEST: 1440
+  MAX_SIZE_TEST: 4000

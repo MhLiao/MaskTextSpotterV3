@@ -1,0 +1,2 @@
+python -m torch.distributed.launch --nproc_per_node=8 tools/train_net.py --config-file configs/pretrain/seg_rec_poly_fuse_feature.yaml
+# python -m torch.distributed.launch --nproc_per_node=8 tools/train_net.py --config-file configs/mixtrain/seg_rec_poly_fuse_feature.yaml

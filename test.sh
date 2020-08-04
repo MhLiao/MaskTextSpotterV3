@@ -1,0 +1,1 @@
+python tools/test_net.py --config-file configs/mixtrain/seg_rec_poly_fuse_feature.yaml
