@@ -1,8 +1,8 @@
 # Mask TextSpotter v3
 This is a PyTorch implemntation of the ECCV 2020 paper [Mask TextSpotter v3](https://arxiv.org/abs/2007.09482). Mask TextSpotter v3 is an end-to-end trainable scene text spotter that adopts a Segmentation Proposal Network (SPN) instead of an RPN. Mask TextSpotter v3 significantly improves robustness to rotations, aspect ratios, and shapes.
 
-# Relationship to Mask TextSpotter
-Here we label the Mask TextSpotter series as Mask TextSpotter v1 ([ECCV 2018 paper](https://openaccess.thecvf.com/content_ECCV_2018/papers/Pengyuan_Lyu_Mask_TextSpotter_An_ECCV_2018_paper.pdf), [code](https://github.com/lvpengyuan/masktextspotter.caffe2)), Mask TextSpotter v2 ([TPAMI paper](https://ieeexplore.ieee.org/document/8812908), [code](https://github.com/MhLiao/MaskTextSpotter)), and Mask TextSpotter v3 (ECCV 2020 paper)
+## Relationship to Mask TextSpotter
+Here we label the Mask TextSpotter series as Mask TextSpotter v1 ([ECCV 2018 paper](https://openaccess.thecvf.com/content_ECCV_2018/papers/Pengyuan_Lyu_Mask_TextSpotter_An_ECCV_2018_paper.pdf), [code](https://github.com/lvpengyuan/masktextspotter.caffe2)), Mask TextSpotter v2 ([TPAMI paper](https://ieeexplore.ieee.org/document/8812908), [code](https://github.com/MhLiao/MaskTextSpotter)), and Mask TextSpotter v3 (ECCV 2020 paper).
 
 This repo is inherited from [Mask TextSpotter v2](https://github.com/MhLiao/MaskTextSpotter) and follows the same license.
 
