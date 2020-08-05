@@ -14,7 +14,6 @@ import os
 import torch
 from maskrcnn_benchmark.config import cfg
 from maskrcnn_benchmark.data import make_data_loader
-# from maskrcnn_benchmark.engine.inference import inference
 from maskrcnn_benchmark.engine.trainer import do_train
 from maskrcnn_benchmark.modeling.detector import build_detection_model
 from maskrcnn_benchmark.solver import make_lr_scheduler, make_optimizer
@@ -22,10 +21,8 @@ from maskrcnn_benchmark.utils.checkpoint import DetectronCheckpointer
 from maskrcnn_benchmark.utils.collect_env import collect_env_info
 from maskrcnn_benchmark.utils.comm import get_rank, synchronize, get_world_size
 
-# from maskrcnn_benchmark.utils.imports import import_file
 from maskrcnn_benchmark.utils.logging import Logger, setup_logger
 from maskrcnn_benchmark.utils.miscellaneous import mkdir
-# from maskrcnn_benchmark.data.datasets import extract_datasets
 from maskrcnn_benchmark.engine.launch import launch
 try:
     from apex import amp
