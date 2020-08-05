@@ -1,9 +1,6 @@
 MODEL:
   META_ARCHITECTURE: "GeneralizedRCNN"
-  # WEIGHT: "catalog://ImageNetPretrained/MSRA/R-50"
-  # WEIGHT: '/checkpoint/minghuiliao/MaskTextSpotter/output/seg_rec/model_0180000.pth'
-  WEIGHT: '/checkpoint/minghuiliao/MaskTextSpotter/output/seg_rec_poly_fuse_feature_pretrain/model_0299999.pth'
-  # WEIGHT: '/checkpoint/minghuiliao/MaskTextSpotter/output/seg_alone_finetune/model_0160000.pth'
+  WEIGHT: "catalog://ImageNetPretrained/MSRA/R-50"
   BACKBONE:
     CONV_BODY: "R-50-FPN"
     OUT_CHANNELS: 256
