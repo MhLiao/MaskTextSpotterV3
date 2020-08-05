@@ -4,7 +4,7 @@ This is a PyTorch implemntation of the ECCV 2020 paper [Mask TextSpotter v3](htt
 ## Relationship to Mask TextSpotter
 Here we label the Mask TextSpotter series as Mask TextSpotter v1 ([ECCV 2018 paper](https://openaccess.thecvf.com/content_ECCV_2018/papers/Pengyuan_Lyu_Mask_TextSpotter_An_ECCV_2018_paper.pdf), [code](https://github.com/lvpengyuan/masktextspotter.caffe2)), Mask TextSpotter v2 ([TPAMI paper](https://ieeexplore.ieee.org/document/8812908), [code](https://github.com/MhLiao/MaskTextSpotter)), and Mask TextSpotter v3 (ECCV 2020 paper).
 
-Part of the code is inherited from [Mask TextSpotter v2](https://github.com/MhLiao/MaskTextSpotter), which is under an MIT license.
+This project is under a lincense of Creative Commons Attribution-NonCommercial 4.0 International. Part of the code is inherited from [Mask TextSpotter v2](https://github.com/MhLiao/MaskTextSpotter), which is under an MIT license.
 
 
 ## Installation
