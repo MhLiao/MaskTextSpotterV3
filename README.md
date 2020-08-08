@@ -64,7 +64,7 @@ This project is under a lincense of Creative Commons Attribution-NonCommercial 4
 ```
 
 ## Models
-Download Trained [model](https://drive.google.com/file/d/1XQsikiNY7ILgZvmvOeUf9oPDG4fTp0zs/view?usp=sharing)
+Download Trained model [Google Drive](https://drive.google.com/file/d/1XQsikiNY7ILgZvmvOeUf9oPDG4fTp0zs/view?usp=sharing), [BaiduYun](https://pan.baidu.com/s/1fV1RbyQ531IifdKxkScItQ) (downloading code: cnj2)
 
 ## Demo 
 You can run a demo script for a single image inference by ```python tools/demo.py```.
