@@ -294,7 +294,7 @@ class Polygons(object):
                 )
             except:
                 print([p.numpy() for p in self.polygons])
-                mask = torch.ones((height, width), dtype=torch.bool)
+                mask = torch.ones((height, width), dtype=torch.uint8)
                 return mask
             rle = mask_utils.merge(rles)
             mask = mask_utils.decode(rle)
