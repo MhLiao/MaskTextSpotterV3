@@ -64,7 +64,10 @@ This project is under a lincense of Creative Commons Attribution-NonCommercial 4
 ```
 
 ## Models
-Download Trained model [Google Drive](https://drive.google.com/file/d/1XQsikiNY7ILgZvmvOeUf9oPDG4fTp0zs/view?usp=sharing), [BaiduYun](https://pan.baidu.com/s/1fV1RbyQ531IifdKxkScItQ) (downloading code: cnj2)
+Download the trained model [Google Drive](https://drive.google.com/file/d/1XQsikiNY7ILgZvmvOeUf9oPDG4fTp0zs/view?usp=sharing), [BaiduYun](https://pan.baidu.com/s/1fV1RbyQ531IifdKxkScItQ) (downloading code: cnj2).
+
+Option: Download the model pretrain with SynthText for your quick re-implementation. [Google Drive](https://drive.google.com/file/d/1vrG-EqiQWRpygh3uQB25NOiJu_jaRy4u/view?usp=sharing), [BaiduYun](https://pan.baidu.com/s/1yR97s9EArTE2asv5rWOf4Q) (downloading code: c82l).
+
 
 ## Demo 
 You can run a demo script for a single image inference by ```python tools/demo.py```.
