@@ -45,7 +45,7 @@ This project is under a lincense of Creative Commons Attribution-NonCommercial 4
   cd cocoapi/PythonAPI
   python setup.py build_ext install
 
-  # install apex (optional)
+  # install apex
   cd $INSTALL_DIR
   git clone https://github.com/NVIDIA/apex.git
   cd apex
