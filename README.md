@@ -115,6 +115,11 @@ check the initial weights in the config file.
 ```python3 -m torch.distributed.launch --nproc_per_node=8 tools/train_net.py --config-file configs/mixtrain/seg_rec_poly_fuse_feature.yaml ```
 
 ## Evaluation
+### Download lexicons
+[Google Drive](https://drive.google.com/file/d/15PAG-ok8KtJjNxP-pOp7kX_esjCpfzn5/view?usp=sharing), [Baidu Drive](https://pan.baidu.com/s/1kXGaF9jev1ysQhTOBbIDDg) (
+downloading code: f3tk)
+
+unzip and palce it like ```evaluation/lexicons/```.
 ### Evaluation for Total-Text dataset
 
 ```
