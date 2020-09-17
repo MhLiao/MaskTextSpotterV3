@@ -81,7 +81,7 @@ class IcdarDataset(object):
             if not self.use_charann:
                 use_char_ann = False
             char_masks = SegmentationCharMask(
-                charsbbs, words=words, use_char_ann=use_char_ann, size=img.size
+                charsbbs, words=words, use_char_ann=use_char_ann, size=img.size, char_num_classes=len(self.char_classes)
             )
             target.add_field("char_masks", char_masks)
         else:

@@ -79,7 +79,7 @@ class ScutDataset(object):
         masks = SegmentationMask(segmentations, img.size)
         target.add_field("masks", masks)
         char_masks = SegmentationCharMask(
-            charsbbs, words=words, use_char_ann=use_char_ann, size=img.size
+            charsbbs, words=words, use_char_ann=use_char_ann, size=img.size, char_num_classes=len(self.char_classes)
         )
         target.add_field("char_masks", char_masks)
         if self.transforms is not None:
