@@ -72,6 +72,14 @@ Option: Download the model pretrain with SynthText for your quick re-implementat
 ## Demo 
 You can run a demo script for a single image inference by ```python tools/demo.py```.
 
+You can run a demo script on samples located within a folder as follows. The Test-Time-Augmentation is used for the inferece time. It sets 4 TTA step as default. Please, checkout the terminal argument to provide necessary paths. Saving the inference results is made automate. 
+
+```
+python tool/demo_plus.py --image_paths <IMG DIRECTORY> --tta_step <NO. OF TTA STEP>
+```
+
+By that, 3 folder will be created within `tools/` directory, namely `out_json`, `out_text`, and `out_images`. The prediction results would be saved into these folders with corresponding image file name. Further, the `plots.ipynb` is used to visually demonstrate the comparison between TTA step. However, if you don't want the tta step, please set the step number to 1.
+
 ## Datasets
 The datasets are the same as Mask TextSpotter v2.
 
