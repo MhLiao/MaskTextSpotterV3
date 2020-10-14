@@ -70,8 +70,6 @@ Option: Download the model pretrain with SynthText for your quick re-implementat
 
 
 ## Demo 
-You can run a demo script for a single image inference by ```python tools/demo.py```.
-
 You can run a demo script on samples located within a folder as follows. The Test-Time-Augmentation is used for the inferece time. It sets 4 TTA step as default. Please, checkout the terminal argument to provide necessary paths. Saving the inference results is made automate. 
 
 ```
