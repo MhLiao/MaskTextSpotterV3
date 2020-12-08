@@ -115,6 +115,14 @@ mv total_text_labels/test_gts .
 mv total_text_labels/train_gts .
 #переименовать!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt-get update
+sudo apt-get install grive
+
+mkdir ~/Google-Drive
+cd ~/Google-Drive
+grive -a --id 480936158995-g5qcivj1df5qv3ccq5115o4g71nrgil7.apps.googleusercontent.com --secret 1whdLc3Hpn0rKB_hnoD34mud -s diplom_drive
 #mkdir ~/MaskTextSpotterV3/datasets/synthtext
 
 
