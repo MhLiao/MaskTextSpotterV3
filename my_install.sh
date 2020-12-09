@@ -117,7 +117,7 @@ mv total_text_labels/train_gts .
 
 mkdir evaluation/lexicons/
 cd ~/download_google_drive
-python download_gdrive.py 15PAG-ok8KtJjNxP-pOp7kX_esjCpfzn5 ~/MaskTextSpotterV3/evaluation/lexicons/lexicon.zip
+python download_gdrive.py 15PAG-ok8KtJjNxP-pOp7kX_esjCpfzn5 ~/MaskTextSpotterV3/lexicon.zip
 cd ~/MaskTextSpotterV3/evaluation/lexicons/
 unzip lexicon.zip
 
