@@ -20,7 +20,7 @@ export PATH=~/anaconda3/bin:$PATH
 conda --version
 conda update -n base -c defaults conda
 
-conda create --name masktextspotter -y
+conda create --name masktextspotter -y python=3.8
   conda activate masktextspotter
 
   # this installs the right pip and dependencies for the fresh python
