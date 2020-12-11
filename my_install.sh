@@ -61,7 +61,7 @@ conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
   unset INSTALL_DIR
 
 pip install requests
-sudo apt install unzip
+sudo apt install unzip zip
 mkdir output
 mkdir output/mixtrain
 mkdir ~/MaskTextSpotterV3/datasets
@@ -70,6 +70,9 @@ cd ~
 git clone https://github.com/chentinghao/download_google_drive.git
 cd download_google_drive
 python download_gdrive.py 1XQsikiNY7ILgZvmvOeUf9oPDG4fTp0zs ~/MaskTextSpotterV3/output/mixtrain/trained_model.pth
+
+cd download_google_drive
+python download_gdrive.py 1vrG-EqiQWRpygh3uQB25NOiJu_jaRy4u ~/MaskTextSpotterV3/output/mixtrain/pretrain_model.pth
 
 cd ~/download_google_drive
 python download_gdrive.py 1sptDnAomQHFVZbjvnWt2uBvyeJ-gEl-A ~/MaskTextSpotterV3/datasets/icdar2013.zip
