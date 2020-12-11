@@ -133,7 +133,9 @@ mkdir ~/Google-Drive
 cd ~/Google-Drive
 grive -a --id 480936158995-g5qcivj1df5qv3ccq5115o4g71nrgil7.apps.googleusercontent.com --secret 1whdLc3Hpn0rKB_hnoD34mud -s diplom_drive
 
-
+cd download_google_drive
+python download_gdrive.py 18PXTYeu0g-VEvYjdYp7DHPbTJFjnT6De ~/MaskTextSpotterV3/output/mixtrain/pretrained_model_v60.pth
+https://drive.google.com/file/d/18PXTYeu0g-VEvYjdYp7DHPbTJFjnT6De/view?usp=sharing
 
 #mkdir ~/MaskTextSpotterV3/datasets/synthtext
 
