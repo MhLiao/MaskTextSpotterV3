@@ -85,7 +85,7 @@ cd ~/MaskTextSpotterV3/datasets
 unzip icdar2015.zip
 
 wget http://www.robots.ox.ac.uk/~vgg/data/scenetext/SynthText.zip
-unzip SynthText.zip
+unzip -q SynthText.zip
 mv SynthText train_images
 mkdir synthtext
 mv train_images synthtext
