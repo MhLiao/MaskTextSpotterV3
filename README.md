@@ -152,11 +152,10 @@ Please cite the related works in your publications if it helps your research:
       author={M. {Liao} and P. {Lyu} and M. {He} and C. {Yao} and W. {Wu} and X. {Bai}},
       journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
       title={Mask TextSpotter: An End-to-End Trainable Neural Network for Spotting Text with Arbitrary Shapes},
-      year={2019},
-      volume={},
-      number={},
-      pages={1-1},
-      doi={10.1109/TPAMI.2019.2937086}
+      volume={43},
+      number={2},
+      pages={532--548},
+      year={2021}
     }
     
     @inproceedings{lyu2018mask,
