@@ -301,10 +301,10 @@ class ScutDataset(object):
         )
 
     def check_charbb(self, charbb):
-        xmins = min(charbb[0], charbb[2], charbb[4], charbb[6])
-        xmaxs = max(charbb[0], charbb[2], charbb[4], charbb[6])
-        ymins = min(charbb[1], charbb[3], charbb[5], charbb[7])
-        ymaxs = max(charbb[1], charbb[3], charbb[5], charbb[7])
+        xmins = min(*charbb[0:8:2])
+        xmaxs = max(*charbb[0:8:2])
+        ymins = min(*charbb[1:9:2])
+        ymaxs = max(*charbb[1:9:2])
         return (
             xmaxs - xmins > self.min_proposal_size
             and ymaxs - ymins > self.min_proposal_size
